@@ -80,7 +80,7 @@ def server(input, output, session):
     
     chat = ui.Chat(id="chat", messages=[
         # FIXED
-        {"role": "assistant", "content": "Describe the properties you want see (eg 'High risk timber in London')."}
+        {"role": "assistant", "content": "Describe the properties you want to see (eg 'High risk timber in Glasgow')."}
     ])
     
     @chat.on_user_submit
