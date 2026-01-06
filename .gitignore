@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+AI-Lab-Solution/foo.txt
+
+# Quarto
+*_files/
+*.html
