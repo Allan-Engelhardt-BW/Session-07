@@ -79,7 +79,7 @@ def server(input, output, session):
     filtered_df = reactive.Value(df)
     
     chat = ui.Chat(id="chat", messages=[
-        {"role": "assistant", "content": "Describe the properties you want to see (e.g., 'High risk timber in London')."}
+        {"role": "assistant", "content": "Describe the properties you want to see (eg 'High risk timber in London')."}
     ])
     
     @chat.on_user_submit
