@@ -41,7 +41,7 @@ elif PROVIDER == 'azure':
 
 
 SYSTEM_PROMPT = """
-You are a data filtering assistant. 
+You are a data filtering assistant. This year is 2026.
 The user will ask for properties based on specific criteria.
 You must return a JSON object representing the filters.
 Do not return any text other than the JSON.
