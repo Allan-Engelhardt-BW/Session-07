@@ -4,7 +4,7 @@ from openai import OpenAI
 import json
 
 # Load Data
-df = pl.read_csv("properties.csv")
+df = pl.read_csv("AI-Lab-Starter/properties.csv")
 
 # Configuration
 # Choose provider: 'ollama', 'gemini', or 'azure'
@@ -106,8 +106,11 @@ def server(input, output, session):
                     for col, val in filters.items():
                         if col in df.columns:
                             # TODO - try at least simple strings
-                
+                            current_df = current_df.filter(pl.col(col) == val)
                 filtered_df.set(current_df)
+            except Exception as e:
+                await chat.append_message(f"Error processing request: {e}")
+                return
         else:
             # For now, we just echo
             response = f"You said: {user_input}. (AI logic not implemented yet)"
